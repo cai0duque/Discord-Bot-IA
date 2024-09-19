@@ -39,7 +39,7 @@ async function generateResponse(userId, prompt) {
     const messages = [systemMessage, ...conversation];
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o',
+      model: 'gpt-4o', //Aqui você escolhe qual modelo do GPT você irá integrar com a sua API. Lembrando que você precisa ter acesso ao modelo que deseja utilizar, e você pode verificar isso no site da Dashboard OpenAI
       messages: messages,
     });
 
