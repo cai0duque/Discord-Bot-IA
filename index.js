@@ -77,7 +77,9 @@ client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
   if (message.mentions.has(client.user)) {
-    const prompt = message.content.replace(/<@!?(\d+)>/, '').trim();
+    const prompt = message.content
+      .replace(/<@!?(\d+)>/, '')
+      .trim();
     if (prompt.length === 0) return;
 
     await message.channel.sendTyping();
