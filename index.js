@@ -78,8 +78,8 @@ client.on('messageCreate', async (message) => {
     await message.channel.sendTyping();
     const response = await generateResponse(message.author.id, prompt);
 
-    //Dividir a resposta em partes de até 2000 caracteres, pois o Discord não permite que bots enviem mensagens com mais de 2000 caracteres. 
-    //Então, nesse caso, se a resposta da IA ultrapassar os 2000 caracteres, ela irá dividir a mensagem em duas ou mais partes para respeitar essa limitação do Discord.
+  //Dividir a resposta em partes de até 1999 caracteres, pois o Discord não permite que bots enviem mensagens com mais de 2000 caracteres.
+  //Então, nesse caso, se a resposta da IA ultrapassar os 1999 caracteres, ela irá dividir a mensagem em duas ou mais partes para respeitar essa limitação do Discord.
     const chunks = response.match(/[\s\S]{1,1999}/g);
 
     for (const chunk of chunks) {
