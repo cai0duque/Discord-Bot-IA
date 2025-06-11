@@ -14,7 +14,7 @@
 
 # Guia de Instalação
 
-- Caso queira replicar o código direto ao ponto para iniciar sua pr´pria personalização, prossiga com os passos.
+- Caso queira replicar o código direto ao ponto para iniciar sua própria personalização, prossiga com os passos.
 
 # Requisitos
 
@@ -118,12 +118,11 @@ npm install
 
 - Isso instalará pacotes como `discord.js`, `openai`, `dotenv`.
 
-# 5= Token e APi KEY
+# 5= Token e API KEY
 
 - Crie um arquivo .env na raiz do projeto para armazenar suas chaves de API:
 
 ```bash
-Copiar código
 touch .env
 ```
 
