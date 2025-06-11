@@ -46,6 +46,11 @@ async function generateResponse(userId, prompt) {
     const response = completion.choices[0].message.content.trim();
 
     conversation.push({ role: 'assistant', content: response });
+
+    if (conversation.length > 10) {
+      conversation = conversation.slice(conversation.length - 10);
+    }
+
     userConversations.set(userId, conversation);
 
     return response;
